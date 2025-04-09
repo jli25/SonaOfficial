@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sona Brainwave X1 - Detailed Product Information</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {theme:{extend:{colors:{primary:'#4FD5F7',secondary:''},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4FD5F7, #f0f0f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .spec-section {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+    }
+    .spec-section.active {
+      height: auto;
+    }
+    .color-option {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .color-option.selected::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      border: 2px solid #4FD5F7;
+      border-radius: 50%;
+    }
+    .color-option:hover {
+      transform: scale(1.1);
+    }
+    .tab-button {
+      position: relative;
+    }
+    .tab-button.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #4FD5F7;
+    }
+    .progress-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background-color: #4FD5F7;
+      z-index: 1000;
+      transition: width 0.3s;
+    }
+    .custom-range {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #333;
+      border-radius: 3px;
+      outline: none;
+    }
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: #4FD5F7;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .custom-range::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: #4FD5F7;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+    .custom-checkbox {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: #333;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .custom-checkbox.checked::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: #4FD5F7;
+      border-radius: 2px;
+    }
+    .custom-switch {
+      position: relative;
+      width: 50px;
+      height: 24px;
+      background: #333;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .custom-switch.active {
+      background: #4FD5F7;
+    }
+    .custom-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+    .custom-switch.active::after {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="progress-indicator" id="progressBar"></div>
+  <!-- Header Navigation -->
+  <header class="w-full bg-black border-b border-gray-800 sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+      <img src = "images/logo.png" width = "100" alt = "home" title = "home">
+        <nav class="hidden md:flex space-x-8">
+          <a href="Landing.html" class="text-white hover:text-primary transition">Home</a>
+          <a href="Company.html">About Us</a>
+          <a href="#" class="text-white hover:text-primary transition">Technology</a>
+          <a href="#" class="text-white hover:text-primary transition"></a>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-search-line ri-xl"></i>
+          </div>
+        </a>
+        <a href="#" class="text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-information-line ri-xl"></i>
+          </div>
+        </a>
+        <a href="#" class="hidden md:flex text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-user-line ri-xl"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Product Navigation -->
+  <div class="w-full bg-black border-b border-gray-800 sticky top-[72px] z-40">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="Landing.html" data-readdy="true" class="flex items-center text-white hover:text-primary py-4 mr-6">
+            <div class="w-6 h-6 flex items-center justify-center mr-2">
+              <i class="ri-arrow-left-line"></i>
+            </div>
+            <span>Back to Overview</span>
+          </a>
+          <br>
+          <h1 class="text-xl font-bold py-4">Sona Brainwave X1</h1>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#features" class="tab-button text-white hover:text-primary py-4 active">KEY FEATURES</a>
+          <a href="#specifications" class="tab-button text-white hover:text-primary py-4">TECH SPECS</a>
+          <a href="#gallery" class="tab-button text-white hover:text-primary py-4">GALLERY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <section class="w-full relative overflow-hidden" style="background-image: url('images/landing-header.png'); background-size: cover; background-position: center; height: 80vh;">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+      <div class="w-full md:w-1/2">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">Sona Brainwave X1</h1>
+        <p class="text-xl md:text-2xl mb-8">Next-Generation NeuroTechnology for Enhanced Focus &amp; Wellbeing</p>
+        <div class="flex space-x-4 mb-8">
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 flex items-center justify-center text-primary">
+              <i class="ri-mind-map-line"></i>
+            </div>
+            <span>Real-Time EEG Sensing</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 flex items-center justify-center text-primary">
+              <i class="ri-emotion-line"></i>
+            </div>
+            <span>NeuroAdaptive Interventions</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <div class="w-6 h-6 flex items-center justify-center text-primary">
+              <i class="ri-alarm-line"></i>
+            </div>
+            <span>Smart Wake-Up &amp; Sleep</span>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <a href="#features">
+            <button class="bg-primary text-black px-8 py-3 font-semibold !rounded-button whitespace-nowrap">Explore Features</button>
+          </a>
+          <a href="#specifications">
+            <button class="bg-transparent border border-white text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap">View Tech Specs</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Key Features -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Key Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Feature 1: NeuroFocus™ -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64 overflow-hidden" style="background-image: url('images/landing-focus.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-8">
+            <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+              <i class="ri-mind-map-line ri-2x"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">NeuroFocus™ Focus Enhancement</h3>
+            <p class="text-gray-300 mb-6">Sona Brainwave X1 continuously monitors your brain’s alpha and beta waves. When cognitive fatigue is detected, our NeuroFocus™ system gently delivers 40Hz rhythmic auditory stimulation alongside subtle haptic feedback, helping you regain a state of deep concentration.</p>
+            <!-- 可添加控制示例 -->
+          </div>
+        </div>
+        <!-- Feature 2: NeuroCalm™ -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64 overflow-hidden" style="background-image: url('images/landing-sleep.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-8">
+            <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+              <i class="ri-emotion-line ri-2x"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">NeuroCalm™ Emotion &amp; Stress Relief</h3>
+            <p class="text-gray-300 mb-6">Utilizing advanced EEG signal analysis and machine learning, Sona detects emotional shifts and stress. It then engages NeuroCalm™ mode by playing soothing sounds and triggering gentle vibrations to help you restore balance and relax.</p>
+          </div>
+        </div>
+        <!-- Feature 3: Neuro-Adaptive Wake-Up -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64 overflow-hidden" style="background-image: url('images/landing-wake.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-8">
+            <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+              <i class="ri-alarm-line ri-2x"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Neuro-Adaptive Wake-Up &amp; Sleep</h3>
+            <p class="text-gray-300 mb-6">By continuously analyzing your sleep cycles, Sona Brainwave X1 gently wakes you during a light sleep phase for a refreshed start. It also helps you fall asleep by providing personalized, calming auditory cues tailored to your neural rhythms.</p>
+          </div>
+        </div>
+        <!-- Feature 4: Smart Connectivity -->
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64 overflow-hidden" style="background-image: url('images/landing-emotion.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-8">
+            <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+              <i class="ri-bluetooth-line ri-2x"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Seamless App Integration</h3>
+            <p class="text-gray-300 mb-6">Effortlessly connect Sona Brainwave X1 with your smartphone and companion app. Access real-time neurofeedback, personalized insights, and firmware updates over Bluetooth for a truly connected experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cognitive Performance Visualization -->
+  <section id="audio-performance" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Cognitive Performance</h2>
+      <div class="mb-12 text-center">
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Experience real-time visualization of your brainwave patterns – from Delta to Gamma waves – and track your focus, stress, and relaxation states with precision.</p>
+      </div>
+      <div class="w-full h-96 mb-12" id="frequencyChart"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-equalizer-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Dynamic Metrics</h3>
+          <p class="text-gray-400">Real-time analysis of your neural patterns to reveal your optimal focus levels.</p>
+        </div>
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-emotion-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Stress Insights</h3>
+          <p class="text-gray-400">Monitor fluctuations in your emotional state to manage stress effectively.</p>
+        </div>
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-alarm-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Sleep Cycle Mapping</h3>
+          <p class="text-gray-400">Visualize your sleep phases and wake up at the optimal moment for peak rejuvenation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Technical Specifications -->
+  <section id="specifications" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Technical Specifications</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Sticky Spec Navigation -->
+        <div class="col-span-1">
+          <div class="sticky top-[180px]">
+            <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6">
+              <h3 class="text-xl font-bold mb-6">Specifications</h3>
+              <ul class="space-y-4">
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="eeg-specs">
+                    <span class="font-semibold">EEG Performance</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="connectivity-specs">
+                    <span class="font-semibold">Connectivity</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="battery-specs">
+                    <span class="font-semibold">Battery &amp; Power</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="design-specs">
+                    <span class="font-semibold">Design &amp; Materials</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="intervention-specs">
+                    <span class="font-semibold">Adaptive Interventions</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="features-specs">
+                    <span class="font-semibold">Additional Features</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button class="spec-toggle w-full flex items-center justify-between text-left" data-target="box-specs">
+                    <span class="font-semibold">In the Box</span>
+                    <div class="w-6 h-6 flex items-center justify-center">
+                      <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Spec Details -->
+        <div class="col-span-1 md:col-span-2">
+          <!-- EEG Performance Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="eeg-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-mind-map-line"></i>
+                </div>
+                EEG Performance
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Sensor Type</span>
+                      <span class="text-white">Multi-Channel Dry Electrodes</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Frequency Range</span>
+                      <span class="text-white">0.5Hz - 100Hz</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Sampling Rate</span>
+                      <span class="text-white">~250 Hz</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Data Accuracy</span>
+                      <span class="text-white">&gt;98%</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Signal Latency</span>
+                      <span class="text-white">&lt;50ms</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Noise Isolation</span>
+                      <span class="text-white">Optimized</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Auto Calibration</span>
+                      <span class="text-white">Yes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Connectivity Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="connectivity-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-bluetooth-line"></i>
+                </div>
+                Connectivity
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Bluetooth Version</span>
+                      <span class="text-white">5.3</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Multi-Device Pairing</span>
+                      <span class="text-white">Yes (2 devices)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>NFC Pairing</span>
+                      <span class="text-white">Yes</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Wired Connection</span>
+                      <span class="text-white">3.5mm Input</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>USB Connection</span>
+                      <span class="text-white">USB-C</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Companion App</span>
+                      <span class="text-white">Sona Connect</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Battery & Power Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="battery-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-battery-2-charge-line"></i>
+                </div>
+                Battery &amp; Power
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Battery Type</span>
+                      <span class="text-white">Lithium-ion</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Capacity</span>
+                      <span class="text-white">Approx. 1100 mAh</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Playback (Normal Mode)</span>
+                      <span class="text-white">Up to 10 hrs</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Fast Charging</span>
+                      <span class="text-white">15 min = 3 hrs</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Charging Port</span>
+                      <span class="text-white">USB-C</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Wireless Charging</span>
+                      <span class="text-white">Qi Compatible</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Design & Materials Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="design-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-layout-line"></i>
+                </div>
+                Design &amp; Materials
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Weight</span>
+                      <span class="text-white">Approx. 180g</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Materials</span>
+                      <span class="text-white">Lightweight Polymer, Memory Foam</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Ear Cushions</span>
+                      <span class="text-white">Premium Memory Foam</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Headband</span>
+                      <span class="text-white">Adjustable &amp; Padded</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Controls</span>
+                      <span class="text-white">Touch Panel + Physical Buttons</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Available Colors</span>
+                      <span class="text-white">Matte Black, Graphite, Pearl White</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Adaptive Interventions Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="intervention-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-emotion-line"></i>
+                </div>
+                Adaptive NeuroInterventions
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Intervention Type</span>
+                      <span class="text-white">40Hz Rhythmic Audio &amp; Haptic</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Modes</span>
+                      <span class="text-white">Focus, Calm, Auto</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Response Time</span>
+                      <span class="text-white">&lt;50ms</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Auto-Adjustment</span>
+                      <span class="text-white">Yes</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Additional Features Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6 mb-8">
+            <div class="spec-section active" id="features-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-function-line"></i>
+                </div>
+                Additional Features
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>Companion App</span>
+                      <span class="text-white">Sona Connect (iOS/Android)</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Firmware Updates</span>
+                      <span class="text-white">Over-the-air</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="space-y-4 text-gray-300">
+                    <li class="flex justify-between">
+                      <span>EEG Analytics</span>
+                      <span class="text-white">Personalized Reports</span>
+                    </li>
+                    <li class="flex justify-between">
+                      <span>Voice Notifications</span>
+                      <span class="text-white">Optional</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- In the Box Spec -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg p-6">
+            <div class="spec-section active" id="box-specs">
+              <h3 class="text-xl font-bold mb-6 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-box-3-line"></i>
+                </div>
+                In the Box
+              </h3>
+              <ul class="space-y-4 text-gray-300">
+                <li class="flex items-start">
+                  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span>Sona Brainwave X1 Headset</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span>Premium Carrying Case</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span>USB-C Charging Cable</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span>Quick Start Guide</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-1">
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <span>Warranty Card</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product Gallery -->
+  <section id="gallery" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Product Gallery</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div class="bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64" style="background-image: url('images/detail-black.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-4">
+          </div>
+        </div>
+        <div class="bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64" style="background-image: url('images/detail-grey.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-4">
+          </div>
+        </div>
+        <div class="bg-black bg-opacity-50 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+          <div class="h-64" style="background-image: url('images/detail-white.png'); background-size: cover; background-position: center;"></div>
+          <div class="p-4">
+          </div>
+        </div>
+        <!-- 更多图片块... -->
+      </div>
+      <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center">
+        <h3 class="text-2xl font-bold mb-6">Available Colors</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 可根据需要继续添加颜色展示内容 -->
+          <div class="color-option selected w-16 h-16 rounded-full bg-gray-900 mx-auto"></div>
+          <div class="color-option w-16 h-16 rounded-full bg-gray-600 mx-auto"></div>
+          <div class="color-option w-16 h-16 rounded-full bg-gray-100 mx-auto"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- (Model Comparison 区块如有，可在此添加) -->
+  <script>
+    // 初始化 ECharts 图表用于展示认知性能数据
+    const frequencyChart = echarts.init(document.getElementById('frequencyChart'));
+    const option = {
+      animation: false,
+      grid: { left: 0, right: 0, top: 0, bottom: 0 },
+      tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        textStyle: { color: '#1f2937' }
+      },
+      legend: {
+        data: ['Sona Brainwave X1', 'Competitor A', 'Competitor B'],
+        textStyle: { color: '#ffffff' },
+        bottom: 10
+      },
+      xAxis: {
+        type: 'category',
+        data: ['Delta', 'Theta', 'Alpha', 'Beta', 'Gamma'],
+        axisLine: { lineStyle: { color: '#555' } },
+        axisLabel: { color: '#ffffff' }
+      },
+      yAxis: {
+        type: 'value',
+        name: 'Signal Strength',
+        nameTextStyle: { color: '#ffffff' },
+        axisLine: { lineStyle: { color: '#555' } },
+        axisLabel: { color: '#ffffff' },
+        splitLine: { lineStyle: { color: 'rgba(255, 255, 255, 0.1)' } }
+      },
+      series: [
+        {
+          name: 'Sona Brainwave X1',
+          type: 'line',
+          data: [70, 80, 95, 90, 85],
+          smooth: true,
+          lineStyle: { width: 4, color: 'rgba(87, 181, 231, 1)' },
+          areaStyle: {
+            color: {
+              type: 'linear',
+              x: 0, y: 0, x2: 0, y2: 1,
+              colorStops: [
+                { offset: 0, color: 'rgba(87, 181, 231, 0.3)' },
+                { offset: 1, color: 'rgba(87, 181, 231, 0.1)' }
+              ]
+            }
+          },
+          symbol: 'none'
+        },
+        {
+          name: 'Competitor A',
+          type: 'line',
+          data: [65, 75, 90, 85, 80],
+          smooth: true,
+          lineStyle: { width: 3, color: 'rgba(141, 211, 199, 1)' },
+          symbol: 'none'
+        },
+        {
+          name: 'Competitor B',
+          type: 'line',
+          data: [60, 70, 85, 80, 75],
+          smooth: true,
+          lineStyle: { width: 3, color: 'rgba(251, 191, 114, 1)' },
+          symbol: 'none'
+        }
+      ]
+    };
+    frequencyChart.setOption(option);
+    window.addEventListener('resize', () => frequencyChart.resize());
+    
+    // 简单的规格切换控制（示例代码）
+    document.querySelectorAll('.spec-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const section = document.getElementById(targetId);
+        section.classList.toggle('active');
+      });
+    });
+    
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+      const docHeight = document.body.clientHeight - window.innerHeight;
+      progressBar.style.width = (scrollPos / docHeight * 100) + '%';
+    });
+  </script>
+</body>
+</html>

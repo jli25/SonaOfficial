@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sona Brainwave X1 – Redefine Your Focus</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {theme: {extend: {colors: {primary:'#4FD5F7', secondary: ''}, borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4FD5F7, #f0f0f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header Navigation -->
+  <header class="w-full bg-black border-b border-gray-800">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+      <img src = "images/logo.png" width = "100" alt = "home" title = "home">
+        <nav class="hidden md:flex space-x-8">
+          <a href="#" class="text-white hover:text-primary transition">Home</a>
+          <a href="Company.html" class="text-white hover:text-primary transition">About Us</a>
+          <a href="#" class="text-white hover:text-primary transition">Technology</a>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-search-line ri-xl"></i>
+          </div>
+        </a>
+        <a href="#" class="text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-information-line ri-xl"></i>
+          </div>
+        </a>
+        <a href="#" class="hidden md:flex text-white hover:text-primary">
+          <div class="w-10 h-10 flex items-center justify-center">
+            <i class="ri-user-line ri-xl"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Product Navigation -->
+  <div class="w-full bg-black border-b border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-xl font-bold py-4">Sona Brainwave X1</h1>
+        <div class="flex space-x-6">
+          <a href="#features" class="text-white hover:text-primary border-b-2 border-primary py-4">FEATURES</a>
+          <a href="#specifications" class="text-white hover:text-primary py-4">SPECIFICATIONS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section -->
+ <section class="w-full relative overflow-hidden" style="background-image: url('images/landing-header.png'); background-size: cover; background-position: center; height: 90vh;">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+      <div class="w-full md:w-1/2">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">Sona Brainwave X1</h1>
+        <p class="text-xl md:text-2xl mb-8">Master Your Focus | Real-Time Brainwave Tracking | NeuroAdaptive Interventions</p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <button class="bg-primary text-black px-8 py-3 font-semibold !rounded-button whitespace-nowrap"><a href= "Detail.html">Learn More</button>
+          <button class="bg-transparent border border-white text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Feature Highlights -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Unlock Your Mind’s Potential</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Feature 1: Focus Enhancement -->
+        <div class="flex flex-col">
+          <div class="bg-gray-900 rounded p-8 mb-6" style="background-image: url('images/landing-focus.png'); background-size: cover; background-position: center; height: 350px;"></div>
+          <h3 class="text-2xl font-bold mb-4">NeuroFocus™ Focus Enhancement</h3>
+          <p class="text-gray-300">Sona Brainwave X1 continuously monitors your brain’s alpha and beta waves in real time. When it detects cognitive fatigue, it triggers our NeuroFocus™ system with 40Hz rhythmic audio pulses and gentle haptic feedback to re-engage your prefrontal cortex, restoring deep focus.</p>
+        </div>
+        <!-- Feature 2: Emotion Recognition & Relaxation -->
+        <div class="flex flex-col">
+          <div class="bg-gray-900 rounded p-8 mb-6" style="background-image: url('images/landing-emotion.png'); background-size: cover; background-position: center; height: 350px;"></div>
+          <h3 class="text-2xl font-bold mb-4">NeuroCalm™: Emotion Recognition &amp; Relaxation</h3>
+          <p class="text-gray-300">Using advanced EEG signal analysis, Sona detects shifts in your emotional state. When stress or anxiety arises, it activates NeuroCalm™ – playing soothing sounds like pink noise and delivering subtle vibrations to restore balance and calm your mind.</p>
+        </div>
+        <!-- Feature 3: Neuro-Adaptive Wake-Up -->
+        <div class="flex flex-col">
+          <div class="bg-gray-900 rounded p-8 mb-6" style="background-image: url('images/landing-sleep.png'); background-size: cover; background-position: center; height: 350px;"></div>
+          <h3 class="text-2xl font-bold mb-4">Neuro-Adaptive Wake-Up</h3>
+          <p class="text-gray-300">Leveraging EEG-based sleep stage detection, Sona gently wakes you at the optimal moment. By monitoring your sleep cycles, it ensures you arise during a light sleep phase for a naturally refreshed start—seamlessly integrating with smart devices for a personalized morning routine.</p>
+        </div>
+        <!-- Feature 4: Assist Sleep & Recovery -->
+        <div class="flex flex-col">
+          <div class="bg-gray-900 rounded p-8 mb-6" style="background-image: url('images/landing-wake.png'); background-size: cover; background-position: center; height: 350px;"></div>
+          <h3 class="text-2xl font-bold mb-4">Assist Sleep &amp; Recovery</h3>
+          <p class="text-gray-300">Struggling to fall asleep? Sona supports your nightly rest by playing tailored auditory cues and providing mild stimulation, guiding you into a state of relaxation. Continuous monitoring ensures dynamic adjustments so you enjoy rejuvenating, high-quality sleep each night.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">About Sona</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Left Column - Image -->
+        <div class="flex items-center justify-center">
+          <div class="w-full h-96 rounded-lg" style="background-image: url('images/landing-us.png'); background-size: cover; background-position: center;"></div>
+        </div>
+        <!-- Right Column - About Content -->
+        <div class="flex flex-col justify-center">
+          <h3 class="text-2xl font-bold mb-6 gradient-text">Pioneering NeuroTech Innovation Since 2024</h3>
+          <p class="text-gray-300 mb-6">Founded by a team of innovative students from Brown University, RISD, MIT, and Harvard, Sona is redefining the way we interact with our minds. We fuse neuroscience, speculative design, and AI-driven analytics to transform brainwaves into actionable insights that help you master focus, regulate emotions, and optimize sleep.</p>
+          <p class="text-gray-300 mb-8">Every Sona product is meticulously engineered with state-of-the-art dry-electrode EEG sensors and adaptive machine learning algorithms, ensuring comfort, precision, and personalized interventions for a better daily experience.</p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center mr-4 text-primary">
+                <i class="ri-award-line ri-2x"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">10+ Awards</h4>
+                <p class="text-gray-400 text-sm">For NeuroTech Innovation</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center mr-4 text-primary">
+                <i class="ri-global-line ri-2x"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Global Presence</h4>
+                <p class="text-gray-400 text-sm">In 5+ Countries</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center mr-4 text-primary">
+                <i class="ri-team-line ri-2x"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">20+ Engineers</h4>
+                <p class="text-gray-400 text-sm">Dedicated to Innovation</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 flex items-center justify-center mr-4 text-primary">
+                <i class="ri-recycle-line ri-2x"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Eco-Friendly</h4>
+                <p class="text-gray-400 text-sm">Sustainable Materials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Technical Specifications -->
+  <section id="specifications" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Technical Excellence</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Left Column - Image -->
+        <div class="flex items-center justify-center">
+          <div class="w-full h-96 rounded-lg" style="background-image: url('images/landing-footer.png'); background-size: cover; background-position: center;"></div>
+        </div>
+        <!-- Right Column - Specs -->
+        <div>
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold mb-4 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-sound-module-line ri-lg"></i>
+                </div>
+                EEG Sensing &amp; Cognitive Monitoring
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Multi-channel dry EEG sensors</li>
+                <li>• Monitors alpha (8–12Hz) &amp; beta (13–30Hz) waves</li>
+                <li>• Real-time neural data analysis</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-bluetooth-line ri-lg"></i>
+                </div>
+                Connectivity &amp; Integration
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Bluetooth® 5.0 Low Energy</li>
+                <li>• Multi-device synchronization (smart wearables &amp; app)</li>
+                <li>• NFC pairing for quick setup</li>
+                <li>• Dedicated companion mobile app</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-battery-2-charge-line ri-lg"></i>
+                </div>
+                Power &amp; Charging
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Up to 10 hours continuous operation</li>
+                <li>• Fast USB-C charging (2 hours full charge)</li>
+                <li>• Qi wireless charging compatible</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4 flex items-center">
+                <div class="w-8 h-8 flex items-center justify-center mr-2 text-primary">
+                  <i class="ri-mic-line ri-lg"></i>
+                </div>
+                Sensor Suite &amp; AI
+              </h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Integrated motion &amp; environmental sensors</li>
+                <li>• AI-driven cognitive state analysis</li>
+                <li>• Adaptive intervention algorithms</li>
+                <li>• Personalized wellness reports</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cognitive Performance Visualization -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Visualize Your Cognitive Rhythms</h2>
+      <div class="mb-12 text-center">
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">Explore real-time visualizations of your brain activity, tracking focus, stress, and sleep cycles through our innovative neural feedback chart.</p>
+      </div>
+      <div class="w-full h-96 mb-12" id="soundChart"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-equalizer-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Dynamic Metrics</h3>
+          <p class="text-gray-400">Real-time analysis of your neural patterns to showcase optimal focus levels.</p>
+        </div>
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-surround-sound-line ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Stress Indicators</h3>
+          <p class="text-gray-400">Visual representations of your emotional changes to help you manage stress.</p>
+        </div>
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div class="w-12 h-12 flex items-center justify-center mb-4 text-primary">
+            <i class="ri-sound-module-fill ri-2x"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Sleep Cycle Mapping</h3>
+          <p class="text-gray-400">Monitor and optimize your sleep patterns with intuitive data visualization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">What Users Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-900 p-8 rounded-lg">
+          <div class="flex items-center mb-6">
+            <div class="text-primary">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6">"Since I started using Sona Brainwave X1, my concentration has reached new heights. The NeuroFocus™ feature keeps me in the zone during long work sessions, and I truly feel in control of my day."</p>
+          <div class="flex items-center">
+            <div class="mr-4 w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+              <i class="ri-user-line ri-lg text-gray-400"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Michael Anderson</h4>
+              <p class="text-gray-400 text-sm">Product Manager</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-900 p-8 rounded-lg">
+          <div class="flex items-center mb-6">
+            <div class="text-primary">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6">"The stress monitoring and NeuroCalm™ mode are impressive. I get subtle cues that help me manage daily anxiety, and it feels like I have a personal wellness coach on my head."</p>
+          <div class="flex items-center">
+            <div class="mr-4 w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+              <i class="ri-user-line ri-lg text-gray-400"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Samantha Reynolds</h4>
+              <p class="text-gray-400 text-sm">UX Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-900 p-8 rounded-lg">
+          <div class="flex items-center mb-6">
+            <div class="text-primary">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6">"Waking up used to be the hardest part of my day. With Sona’s adaptive wake-up, I rise feeling refreshed and ready to tackle anything. It’s life-changing!"</p>
+          <div class="flex items-center">
+            <div class="mr-4 w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center">
+              <i class="ri-user-line ri-lg text-gray-400"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">David Chen</h4>
+              <p class="text-gray-400 text-sm">Entrepreneur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900" style="background-image: url('images/landing-feature.png'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Elevate Your Cognitive Experience</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Experience the future of brain-integrated technology with Sona Brainwave X1. Unlock deeper focus, balanced emotions, and restorative sleep for a smarter, more vibrant life.</p>
+      <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+        <button class="bg-primary text-black px-8 py-3 font-semibold !rounded-button whitespace-nowrap">Learn More</button>
+        <button class="bg-transparent border border-white text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap">View Specifications</button>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Products</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-primary">Brainwave Headsets</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Wearable Sensors</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Smart Accessories</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Technology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-primary">Product Help</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Service & Warranty</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Register Product</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-primary">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Connect</h3>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-gray-400 hover:text-primary">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <i class="ri-twitter-x-line ri-lg"></i>
+              </div>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <i class="ri-facebook-line ri-lg"></i>
+              </div>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-primary">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <i class="ri-youtube-line ri-lg"></i>
+              </div>
+            </a>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+          <div class="flex">
+            <input type="email" placeholder="Your email" class="bg-gray-900 text-white px-4 py-2 rounded-l border-none w-full">
+            <button class="bg-primary text-black px-4 py-2 rounded-r !rounded-button whitespace-nowrap">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div class="text-gray-400 mb-4 md:mb-0">
+          © 2025 Sona Inc. All rights reserved.
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-primary text-sm">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-primary text-sm">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-primary text-sm">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+  <script>
+    // Initialize cognitive performance chart
+    const soundChart = echarts.init(document.getElementById('soundChart'));
+    const option = {
+      animation: false,
+      grid: {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0
+      },
+      tooltip: {
+        trigger: 'axis',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        textStyle: {
+          color: '#1f2937'
+        }
+      },
+      legend: {
+        data: ['Sona Brainwave X1', 'Competitor A', 'Competitor B'],
+        textStyle: {
+          color: '#ffffff'
+        },
+        bottom: 10
+      },
+      xAxis: {
+        type: 'category',
+        data: ['Delta', 'Theta', 'Alpha', 'Beta', 'Gamma'],
+        axisLine: {
+          lineStyle: {
+            color: '#555'
+          }
+        },
+        axisLabel: {
+          color: '#ffffff'
+        }
+      },
+      yAxis: {
+        type: 'value',
+        name: 'Signal Strength',
+        nameTextStyle: {
+          color: '#ffffff'
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#555'
+          }
+        },
+        axisLabel: {
+          color: '#ffffff'
+        },
+        splitLine: {
+          lineStyle: {
+            color: 'rgba(255, 255, 255, 0.1)'
+          }
+        }
+      },
+      series: [
+        {
+          name: 'Sona Brainwave X1',
+          type: 'line',
+          data: [70, 80, 95, 90, 85],
+          smooth: true,
+          lineStyle: {
+            width: 4,
+            color: 'rgba(87, 181, 231, 1)'
+          },
+          areaStyle: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: 'rgba(87, 181, 231, 0.3)'
+              }, {
+                offset: 1, color: 'rgba(87, 181, 231, 0.1)'
+              }]
+            }
+          },
+          symbol: 'none'
+        },
+        {
+          name: 'Competitor A',
+          type: 'line',
+          data: [65, 75, 90, 85, 80],
+          smooth: true,
+          lineStyle: {
+            width: 3,
+            color: 'rgba(141, 211, 199, 1)'
+          },
+          symbol: 'none'
+        },
+        {
+          name: 'Competitor B',
+          type: 'line',
+          data: [60, 70, 85, 80, 75],
+          smooth: true,
+          lineStyle: {
+            width: 3,
+            color: 'rgba(251, 191, 114, 1)'
+          },
+          symbol: 'none'
+        }
+      ]
+    };
+    soundChart.setOption(option);
+    // Responsive chart
+    window.addEventListener('resize', function() {
+      soundChart.resize();
+    });
+  </script>
+</body>
+</html>
